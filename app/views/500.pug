@@ -1,8 +1,38 @@
-
 extends layout
 
 block body
-  .jumbotron.mb-0.flex-grow-1
+  .main(role='main')
+    section.page-header.page-header-modern.bg-color-quaternary.page-header-md.custom-page-header
+      .container
+        .row.mt-3
+          .col-md-8.order-2.order-md-1.align-self-center.p-static
+            h1 - 500
+            span.d-block.text-4 500 - Internal server error
+          .col-md-4.order-1.order-md-2.align-self-center
+            ul.breadcrumb.d-block.text-md-right.breadcrumb-light
+              li
+                a(href=l('/')) Home
+              li.active Page
     .container
-      h1= t('Server Error')
-      p.lead.text-muted= t('A server error has unfortunately occurred.  If this error persists, please contact us.')
+    br
+    br
+    br
+    section.http-error.py-0
+      .row.justify-content-center.py-3
+        .col-6.text-center
+          .http-error-main
+            h2.mb-0 500!
+            br
+            span.text-6.font-weight-bold.text-color-dark INTERNAL SERVER ERROR
+            p.text-3.my-4
+              | An unexpected error has occured. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim.
+          a.btn.btn-primary.btn-rounded.btn-xl.font-weight-semibold.text-2.px-4.py-3.mt-1.mb-4(href=l('/'))
+            i.fas.fa-angle-left.pr-3
+            | GO BACK TO HOME PAGE
+    br
+    br
+    br
+    br
+    br
+    br
+    br
