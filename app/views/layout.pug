@@ -6,7 +6,7 @@ html(lang=locale).h-100
       meta(http-equiv="x-ua-compatible", content="ie=edge")
       title= meta.title
       meta(name="description", content=meta.description)
-      meta(name="viewport", content="width=device-width, initial-scale=1")
+      meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no')
 
       //- languages supported
       //- <https://support.google.com/webmasters/answer/189077?hl=en>
@@ -46,10 +46,34 @@ html(lang=locale).h-100
       meta(name='twitter:description', content=meta.description)
       meta(name='twitter:image:src', content=`${config.urls.web}/img/twitter.png`)
 
+    //- fonts file
+    block fonts
+      link(href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700%7CSintony:400,700' rel='stylesheet' type='text/css')
     //- css file
     block stylesheets
-      link(rel="stylesheet", href=manifest('css/app.css'))
-
+      // Vendor CSS
+      link(rel='stylesheet' href=manifest('ta/vendor/bootstrap/css/bootstrap.min.css'))
+      link(rel='stylesheet' href=manifest('ta/vendor/fontawesome-free/css/all.min.css'))
+      link(rel='stylesheet' href=manifest('ta/vendor/animate/animate.min.css'))
+      link(rel='stylesheet' href=manifest('ta/vendor/simple-line-icons/css/simple-line-icons.min.css'))
+      link(rel='stylesheet' href=manifest('ta/vendor/owl.carousel/assets/owl.carousel.min.css'))
+      link(rel='stylesheet' href=manifest('ta/vendor/owl.carousel/assets/owl.theme.default.min.css'))
+      link(rel='stylesheet' href=manifest('ta/vendor/magnific-popup/magnific-popup.min.css'))
+      // Theme CSS
+      link(rel='stylesheet' href=manifest('ta/css/theme.css'))
+      link(rel='stylesheet' href=manifest('ta/css/theme-elements.css'))
+      link(rel='stylesheet' href=manifest('ta/css/theme-blog.css'))
+      link(rel='stylesheet' href=manifest('ta/css/theme-shop.css'))
+      // Current Page CSS
+      link(rel='stylesheet' href=manifest('ta/vendor/rs-plugin/css/settings.css'))
+      link(rel='stylesheet' href=manifest('ta/vendor/rs-plugin/css/layers.css'))
+      link(rel='stylesheet' href=manifest('ta/vendor/rs-plugin/css/navigation.css'))
+      // Demo CSS
+      link(rel='stylesheet' href=manifest('ta/css/demos/demo-business-consulting.css'))
+      // Skin CSS
+      link(rel='stylesheet' href=manifest('ta/css/skins/skin-business-consulting.css'))
+      // Theme Custom CSS
+      link(rel='stylesheet' href=manifest('ta/css/custom.css'))
     block scripts
       //- flash messaging (with koa-better-flash and sweetalert2)
       script.
@@ -114,13 +138,9 @@ html(lang=locale).h-100
 
   body(role='document', class=['/register', '/login', config.verificationPath].includes(ctx.pathWithoutLocale) ? 'pt-0' : '').d-flex.flex-column.h-100
 
-    //- spinner
-    block spinner
-      include spinner/spinner
-
     //- navigation
     block navigation
-      include _nav
+      include partials/_header
 
     //- body
     main(role='main').flex-shrink-0
@@ -129,3 +149,35 @@ html(lang=locale).h-100
     //- footer
     block footer
       include _footer
+
+    block themeScripts
+      script(defer, src=manifest('ta/vendor/modernizr/modernizr.min.js'))
+      // Vendor
+      script(defer, src=manifest('ta/vendor/jquery/jquery.min.js'))
+      script(defer, src=manifest('ta/vendor/jquery.appear/jquery.appear.min.js'))
+      script(defer, src=manifest('ta/vendor/jquery.easing/jquery.easing.min.js'))
+      script(defer, src=manifest('ta/vendor/jquery.cookie/jquery.cookie.min.js'))
+      script(defer, src=manifest('ta/vendor/popper/umd/popper.min.js'))
+      script(defer, src=manifest('ta/vendor/bootstrap/js/bootstrap.min.js'))
+      script(defer, src=manifest('ta/vendor/common/common.min.js'))
+      script(defer, src=manifest('ta/vendor/jquery.validation/jquery.validate.min.js'))
+      script(defer, src=manifest('ta/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js'))
+      script(defer, src=manifest('ta/vendor/jquery.gmap/jquery.gmap.min.js'))
+      script(defer, src=manifest('ta/vendor/jquery.lazyload/jquery.lazyload.min.js'))
+      script(defer, src=manifest('ta/vendor/isotope/jquery.isotope.min.js'))
+      script(defer, src=manifest('ta/vendor/owl.carousel/owl.carousel.min.js'))
+      script(defer, src=manifest('ta/vendor/magnific-popup/jquery.magnific-popup.min.js'))
+      script(defer, src=manifest('ta/vendor/vide/jquery.vide.min.js'))
+      script(defer, src=manifest('ta/vendor/vivus/vivus.min.js'))
+      // Theme Base, Components and Settings
+      script(defer, src=manifest('ta/js/theme.js'))
+      // Current Page Vendor and Views
+      script(defer, src=manifest('ta/vendor/rs-plugin/js/jquery.themepunch.tools.min.js'))
+      script(defer, src=manifest('ta/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js'))
+      // Demo
+      script(defer, src=manifest('ta/js/demos/demo-business-consulting.js'))
+      // Theme Custom
+      script(defer, src=manifest('ta/js/custom.js'))
+      // Theme Initialization Files
+      script(defer, src=manifest('ta/js/theme.init.js'))
+
