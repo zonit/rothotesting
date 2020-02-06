@@ -1,0 +1,60 @@
+header#header.header-transparent.header-transparent-dark-bottom-border.header-effect-shrink(data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}")
+  .header-body.border-top-0.bg-dark.box-shadow-none
+    .header-container.container
+      .header-row
+        .header-column
+          .header-row
+            .header-logo
+              a(href='demo-business-consulting.html')
+                img(alt='Porto' width='82' height='40' src='img/logo-default-slim-dark.png')
+        .header-column.justify-content-end
+          .header-row
+            .header-nav.header-nav-links.header-nav-dropdowns-dark.header-nav-light-text.order-2.order-lg-1
+              .header-nav-main.header-nav-main-mobile-dark.header-nav-main-square.header-nav-main-dropdown-no-borders.header-nav-main-effect-2.header-nav-main-sub-effect-1
+                nav.collapse
+                  ul#mainNav.nav.nav-pills
+                    li
+                      a.nav-link.active(href='demo-business-consulting.html')
+                        | Home
+                    li
+                      a.nav-link(href='demo-business-consulting-about-us.html')
+                        | About Us
+                    li.dropdown.dropdown-primary
+                      a.dropdown-toggle.nav-link(href='demo-business-consulting-expertise.html')
+                        | Expertise
+                      ul.dropdown-menu
+                        li
+                          a.dropdown-item(href='demo-business-consulting-expertise-detail.html')
+                            | Corporate Finance
+                        li
+                          a.dropdown-item(href='demo-business-consulting-expertise-detail.html')
+                            | Corporate Restructuring
+                        li
+                          a.dropdown-item(href='demo-business-consulting-expertise-detail.html')
+                            | Economic Consulting
+                        li
+                          a.dropdown-item(href='demo-business-consulting-expertise-detail.html')
+                            | Litigation Consulting
+                        li
+                          a.dropdown-item(href='demo-business-consulting-expertise-detail.html')
+                            | Strategic Consulting
+                        li
+                          a.dropdown-item(href='demo-business-consulting-expertise-detail.html')
+                            | Tech Consulting
+                    li
+                      a.nav-link(href='demo-business-consulting-cases.html')
+                        | Cases
+                    li
+                      a.nav-link(href='demo-business-consulting-tertimonials.html')
+                        | Testimonials
+                    li
+                      a.nav-link(href='demo-business-consulting-team.html')
+                        | Team
+                    li
+                      a.nav-link(href='demo-business-consulting-blog.html')
+                        | Blog
+                    li
+                      a.nav-link(href='demo-business-consulting-contact-us.html')
+                        | Contact Us
+              button.btn.header-btn-collapse-nav(data-toggle='collapse' data-target='.header-nav-main nav')
+                i.fas.fa-bars
