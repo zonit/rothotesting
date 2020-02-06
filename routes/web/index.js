@@ -24,6 +24,7 @@ localeRouter
   .get('/about', render('about'))
   .get('/contact', render('contact'))
   .get('/testimonials', render('testimonials'))
+  .get('/blog', render('blog'))
   .get('/404', render('404'))
   .get('/500', render('500'))
   .get('/terms', render('terms'))
