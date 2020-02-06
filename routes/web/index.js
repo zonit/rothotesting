@@ -22,6 +22,7 @@ localeRouter
     render('dashboard')
   )
   .get('/about', render('about'))
+  .get('/testimonials', render('testimonials'))
   .get('/404', render('404'))
   .get('/500', render('500'))
   .get('/terms', render('terms'))
