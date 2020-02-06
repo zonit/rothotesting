@@ -2,43 +2,604 @@
 extends layout
 
 block body
-  //- Main jumbotron for a primary marketing message or call to action
-  .jumbotron.mb-0.text-center
-    .container
-      h1= t('The Best Node.js Framework')
-      p.lead= t('Lad scaffolds a Koa webapp and API framework for Node.js')
-      a.btn.btn-success.btn-lg(href=l('/register'), role="button", data-toggle='modal-anchor', data-target='#modal-sign-up')= t('Try the demo')
-  .bg-dark.py-5.text-center
-    .d-flex.justify-content-center
-      .input-group.input-group-lg.w-auto
-        .input-group-prepend
-          span.input-group-text.border.border-light.bg-transparent.text-white: i.fa.fa-terminal
-        input(type='text', name='bash', readonly, value='npm install -g lad').border.border-light.bg-transparent.text-white.form-control#npm-install
-        .input-group-append.d-none.d-md-inline-block
-          button(type='button', data-toggle="clipboard", data-clipboard-target="#npm-install").btn.btn-light
-            i.fa.fa-clipboard
-            = ' '
-            = t('Copy')
-  .container.py-5
-    .row
-      //- Example row of columns
-      .col-md-3
-        h2= t('Web Server')
-        p= t('Built on top of Koa, the successor to Express.  This full-stack web server uses the latest versions of Pug, Gulp, Sass, PostCSS, Bootstrap, and more.')
-        p
-          a.btn.btn-secondary(href="https://lad.js.org/#/?id=front-end", target="_blank", role="button")= `${t('Front-end')} »`
-      .col-md-3
-        h2= t('API Server')
-        p= t('Inspired by Stripe, the RESTful API server also uses Koa and has a complete stack with error handling, authentication, and tests.')
-        p
-          a.btn.btn-secondary(href="https://lad.js.org/#/?id=back-end", target="_blank", role="button")= `${t('Back-end')} »`
-      .col-md-3
-        h2= t('Job Queue')
-        p= t('Layered on top of Bull and backed by Redis, the job scheduler supports cron and human-readable syntax, child processes, and more.')
-        p
-          a.btn.btn-secondary(href="https://lad.js.org/#/?id=back-end", target="_blank", role="button")= `${t('Learn more')} »`
-      .col-md-3
-        h2= t('Proxy Server')
-        p= t("Redirect HTTP to HTTPS traffic with support for Let's Encrypt Free SSL Certbot validation.")
-        p
-          a.btn.btn-secondary(href="https://lad.js.org/#/", target="_blank", role="button")= `${t('View docs')} »`
+  .main(role='main')
+    .slider-container.rev_slider_wrapper(style='height: 100%;')
+      #revolutionSlider.slider.rev_slider.manual(data-version='5.4.8')
+        ul
+          li(data-transition='fade')
+            img.rev-slidebg(src='img/demos/business-consulting/slides/slide-1.jpg' alt='' data-bgposition='center center' data-bgfit='cover' data-bgrepeat='no-repeat' data-bgparallax='1')
+            h1.tp-caption.custom-secondary-font.font-weight-bold.text-color-light(data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']" data-y='center' data-voffset="['-80','-80','-80','-40']" data-start='800' data-transform_in='y:[-300%];opacity:0;s:500;' style='font-size: 32px;') Solutions for
+            .tp-caption.custom-secondary-font.font-weight-bold.text-color-light(data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']" data-y='center' data-voffset="['-42','-42','-42','2']" data-start='800' data-transform_in='y:[-300%];opacity:0;s:500;' style='font-size: 42px;') Pro Business Plan
+            a.btn.btn-primary.tp-caption.text-uppercase.text-color-light.custom-border-radius(href='#about-us' data-hash='' data-hash-offset='85' data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']" data-y='center' data-voffset="['60','60','60','100']" data-start='1500' style='font-size: 12px; padding: 15px 6px;' data-transform_in='y:[-300%];opacity:0;s:500;') Get Started
+          li(data-transition='fade')
+            img.rev-slidebg(src='img/demos/business-consulting/slides/slide-2.jpg' alt='' data-bgposition='center center' data-bgfit='cover' data-bgrepeat='no-repeat' data-bgparallax='1')
+            h1.tp-caption.custom-secondary-font.font-weight-bold.text-color-light(data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']" data-y='center' data-voffset="['-80','-80','-80','-40']" data-start='800' data-transform_in='y:[-300%];opacity:0;s:500;' style='font-size: 32px;') Get your
+            .tp-caption.custom-secondary-font.font-weight-bold.text-color-light(data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']" data-y='center' data-voffset="['-42','-42','-42','2']" data-start='800' data-transform_in='y:[-300%];opacity:0;s:500;' style='font-size: 42px;') Free Consultation
+            a.btn.btn-primary.tp-caption.text-uppercase.text-color-light.custom-border-radius(href='#about-us' data-hash='' data-hash-offset='85' data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']" data-y='center' data-voffset="['60','60','60','100']" data-start='1500' style='font-size: 12px; padding: 15px 6px;' data-transform_in='y:[-300%];opacity:0;s:500;') Get Started
+    section.looking-for.custom-position-1.custom-md-border-top
+      .container
+        .row.align-items-center
+          .col-md-6.col-lg-7
+            .looking-for-box
+              h2
+                | -
+                span.text-1.custom-secondary-font Are you looking for a
+                br
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Business Plan Consultant?
+              p Schedule your company strategy right session now
+          .col-md-3.d-flex.justify-content-md-end.mb-4.mb-md-0
+            a.text-decoration-none(href='tel:+00112304567' target='_blank' title='Call Us Now')
+              span.custom-call-to-action
+                span.action-title.text-color-primary Call Us Now
+                span.action-info.text-color-light +001 1230 4567
+          .col-md-3.col-lg-2
+            a.text-decoration-none(href='mail:mail@example.com' target='_blank' title='Email Us Now')
+              span.custom-call-to-action
+                span.action-title.text-color-primary Email Us Now
+                span.action-info.text-color-light mail@example.com
+    section#about-us.about-us.custom-section-padding
+      .container
+        .row
+          .col-md-6.col-lg-6
+            h2.font-weight-bold.text-color-dark - About Us
+            p.pl-4
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vitae.
+            .pl-4
+              .row
+                .col-lg-6
+                  ul.list.list-icons.list-icons-style-3.list-tertiary
+                    li
+                      i.fas.fa-chevron-right
+                      |  Certified Professionals
+                    li
+                      i.fas.fa-chevron-right
+                      |  Former Chief Executives
+                    li
+                      i.fas.fa-chevron-right
+                      |  Real Estate Professionals
+                .col-lg-6
+                  ul.list.list-icons.list-icons-style-3.list-tertiary
+                    li
+                      i.fas.fa-chevron-right
+                      |  Nobel Laureate Economists
+                    li
+                      i.fas.fa-chevron-right
+                      |  Former Political Leaders
+                    li
+                      i.fas.fa-chevron-right
+                      |  Chartered Financial Analysts
+              a.btn.btn-outline.custom-border-width.btn-primary.mt-3.mb-2.custom-border-radius.font-weight-semibold.text-uppercase(href='demo-business-consulting-about-us.html') Read More
+          .col-md-6.col-lg-6
+            .content-grid.custom-content-grid.mt-5.mb-4
+              .row.content-grid-row
+                .content-grid-item.col-lg-6.bg-color-light.p-4
+                  .counters
+                    .counter.custom-sm-counter-style
+                      img.counter-icon(src='img/demos/business-consulting/icons/icon-1.png' alt='')
+                      strong.text-color-primary.custom-primary-font(data-to='15' data-append='+') 0
+                      label Years in Business
+                .content-grid-item.col-lg-6.p-4
+                  .counters
+                    .counter.margin-style-2.custom-sm-counter-style
+                      img.counter-icon(src='img/demos/business-consulting/icons/icon-2.png' alt='')
+                      strong.text-color-primary.custom-primary-font(data-to='2000' data-append='+') 0
+                      label Successfull Cases
+              .row.content-grid-row
+                .content-grid-item.col-lg-6.p-4
+                  .counters
+                    .counter.custom-sm-counter-style
+                      img.counter-icon(src='img/demos/business-consulting/icons/icon-3.png' alt='')
+                      strong.text-color-primary.custom-primary-font(data-to='240' data-append='+') 0
+                      label Satisfied Clients
+                .content-grid-item.col-lg-6.bg-color-light.p-4
+                  .counters
+                    .counter.margin-style-2.custom-sm-counter-style
+                      img.counter-icon(src='img/demos/business-consulting/icons/icon-4.png' alt='')
+                      strong.text-color-primary.custom-primary-font(data-to='130' data-append='+') 0
+                      label Pro Consultants
+    section.section-secondary.custom-section-padding
+      .container
+        .row.mb-4
+          .col
+            h2.font-weight-bold.text-color-dark.mb-3 - Expertises
+        .row
+          .col-lg-4
+            a.text-decoration-none.appear-animation(href='demo-business-consulting-expertise-detail.html' data-appear-animation='fadeInUp' data-appear-animation-delay='0')
+              .feature-box.custom-feature-box.feature-box-style-2
+                .feature-box-icon
+                  img(src='img/demos/business-consulting/expertise/expertise-1.jpg' alt='')
+                .feature-box-info.ml-3
+                  h4.font-weight-normal.text-5 Corporate Finance
+                  p.text-2
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna.
+          .col-lg-4
+            a.text-decoration-none.appear-animation(href='demo-business-consulting-expertise-detail.html' data-appear-animation='fadeInUp' data-appear-animation-delay='100')
+              .feature-box.custom-feature-box.feature-box-style-2
+                .feature-box-icon
+                  img(src='img/demos/business-consulting/expertise/expertise-2.jpg' alt='')
+                .feature-box-info.ml-3
+                  h4.font-weight-normal.text-5 Corp Restructuring
+                  p.text-2
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna.
+          .col-lg-4
+            a.text-decoration-none.appear-animation(href='demo-business-consulting-expertise-detail.html' data-appear-animation='fadeInUp' data-appear-animation-delay='200')
+              .feature-box.custom-feature-box.feature-box-style-2
+                .feature-box-icon
+                  img(src='img/demos/business-consulting/expertise/expertise-3.jpg' alt='')
+                .feature-box-info.ml-3
+                  h4.font-weight-normal.text-5 Economic Consulting
+                  p.text-2
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna.
+        .row
+          .col-lg-4
+            a.text-decoration-none.appear-animation(href='demo-business-consulting-expertise-detail.html' data-appear-animation='fadeInUp' data-appear-animation-delay='300')
+              .feature-box.custom-feature-box.feature-box-style-2
+                .feature-box-icon
+                  img(src='img/demos/business-consulting/expertise/expertise-4.jpg' alt='')
+                .feature-box-info.ml-3
+                  h4.font-weight-normal.text-5 Litigation Consulting
+                  p.text-2
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna.
+          .col-lg-4
+            a.text-decoration-none.appear-animation(href='demo-business-consulting-expertise-detail.html' data-appear-animation='fadeInUp' data-appear-animation-delay='400')
+              .feature-box.custom-feature-box.feature-box-style-2
+                .feature-box-icon
+                  img(src='img/demos/business-consulting/expertise/expertise-5.jpg' alt='')
+                .feature-box-info.ml-3
+                  h4.font-weight-normal.text-5 Strategic Consulting
+                  p.text-2
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur diam id urna.
+          .col-lg-4
+            a.text-decoration-none.appear-animation(href='demo-business-consulting-expertise-detail.html' data-appear-animation='fadeInUp' data-appear-animation-delay='500')
+              .feature-box.custom-feature-box.feature-box-style-2
+                .feature-box-icon
+                  img(src='img/demos/business-consulting/expertise/expertise-6.jpg' alt='')
+                .feature-box-info.ml-3
+                  h4.font-weight-normal.text-5 Tech Consulting
+                  p.text-2
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur diam id urna.
+        .row
+          .col-lg-12.text-center
+            a.btn.btn-outline.custom-border-width.btn-primary.custom-border-radius.font-weight-semibold.text-uppercase.mb-3(href='demo-business-consulting-expertise.html' title='View All') View All
+    section.custom-section-padding
+      .container
+        .row.mb-3
+          .col-lg-6
+            h2.font-weight-bold.text-color-dark - Our Strategy
+            .owl-carousel.owl-theme.nav-bottom.rounded-nav.numbered-dots.pl-1.pr-1(data-plugin-options="{'items': 1, 'loop': false, 'dots': true, 'nav': false}")
+              div
+                .custom-step-item
+                  span.step.text-uppercase
+                    | Step
+                    span.step-number.text-color-primary
+                      | 01
+                  .step-content
+                    h4.mb-3
+                      | The first meeting
+                      br
+                      strong Understanding the Problem
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vitae odio.
+              div
+                .custom-step-item
+                  span.step.text-uppercase
+                    | Step
+                    span.step-number.text-color-primary
+                      | 02
+                  .step-content
+                    h4.mb-3
+                      | The second meeting
+                      br
+                      strong Business Plan Consultant
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vitae odio.
+              div
+                .custom-step-item
+                  span.step.text-uppercase
+                    | Step
+                    span.step-number.text-color-primary
+                      | 03
+                  .step-content
+                    h4.mb-3
+                      | The final meeting
+                      br
+                      strong Problem Solved
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vitae odio.
+          .col-lg-6
+            h2.font-weight-bold.text-color-dark - Frequently asked questions
+            #accordion7.accordion.without-bg.custom-accordion-style-1
+              .card.card-default
+                .card-header
+                  h4.card-title.m-0
+                    a.accordion-toggle(data-toggle='collapse' data-parent='#accordion7' href='#collapse7One' aria-expanded='true')
+                      | Praesent sit amet quam a lorem commodo tincidunt.
+                      span.custom-accordion-plus
+                #collapse7One.collapse.show(aria-expanded='true')
+                  .card-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.
+              .card.card-default
+                .card-header
+                  h4.card-title.m-0
+                    a.accordion-toggle.collapsed(data-toggle='collapse' data-parent='#accordion7' href='#collapse7Two' aria-expanded='false')
+                      | Integer ac elit id est euismod pellentesque.
+                      span.custom-accordion-plus
+                #collapse7Two.collapse(aria-expanded='false' style='height: 0px;')
+                  .card-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.
+              .card.card-default
+                .card-header
+                  h4.card-title.m-0
+                    a.accordion-toggle.collapsed(data-toggle='collapse' data-parent='#accordion7' href='#collapse7Three' aria-expanded='false')
+                      | Cras interdum neque sit amet justo maximus, ut sollicitudin eros.
+                      span.custom-accordion-plus
+                #collapse7Three.collapse(aria-expanded='false' style='height: 0px;')
+                  .card-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.
+              .card.card-default
+                .card-header
+                  h4.card-title.m-0
+                    a.accordion-toggle.collapsed(data-toggle='collapse' data-parent='#accordion7' href='#collapse7Four' aria-expanded='false')
+                      | Pellentesque in ex molestie, convallis nulla ut, ornare erat.
+                      span.custom-accordion-plus
+                #collapse7Four.collapse(aria-expanded='false' style='height: 0px;')
+                  .card-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.
+    section.section-secondary.custom-section-padding-2
+      .container
+        .row
+          .col
+            h2.font-weight-bold.text-color-dark.mb-3 - Our Cases
+      .owl-carousel.show-nav-title.custom-both-sides-shadow.custom-dots-position-2.custom-dots-style-1.custom-xs-arrows-style-2.mb-0(data-plugin-options="{'items': 6, 'loop': false, 'dots': true, 'nav': false}")
+        div
+          a.text-decoration-none(href='demo-business-consulting-cases-detail.html')
+            span.thumb-info.custom-thumb-info-style-1.thumb-info-hide-wrapper-bg
+              span.thumb-info-wrapper.m-0
+                img.img-fluid(src='img/demos/business-consulting/cases/case-1.jpg' alt='')
+              span.thumb-info-caption.bg-color-secondary.p-4.pt-5.pb-5
+                span.custom-thumb-info-title
+                  span.custom-thumb-info-name.font-weight-semibold.text-color-dark.text-4 Corporate Finance
+                  span.custom-thumb-info-desc.font-weight-light Okler
+                span.custom-arrow
+        div
+          a.text-decoration-none(href='demo-business-consulting-cases-detail.html')
+            span.thumb-info.custom-thumb-info-style-1.thumb-info-hide-wrapper-bg
+              span.thumb-info-wrapper.m-0
+                img.img-fluid(src='img/demos/business-consulting/cases/case-2.jpg' alt='')
+              span.thumb-info-caption.bg-color-secondary.p-4.pt-5.pb-5
+                span.custom-thumb-info-title
+                  span.custom-thumb-info-name.font-weight-semibold.text-color-dark.text-4 Corporate Restructuring
+                  span.custom-thumb-info-desc.font-weight-light Envato
+                span.custom-arrow
+        div
+          a.text-decoration-none(href='demo-business-consulting-cases-detail.html')
+            span.thumb-info.custom-thumb-info-style-1.thumb-info-hide-wrapper-bg
+              span.thumb-info-wrapper.m-0
+                img.img-fluid(src='img/demos/business-consulting/cases/case-3.jpg' alt='')
+              span.thumb-info-caption.bg-color-secondary.p-4.pt-5.pb-5
+                span.custom-thumb-info-title
+                  span.custom-thumb-info-name.font-weight-semibold.text-color-dark.text-4 Economic Consultanting
+                  span.custom-thumb-info-desc.font-weight-light Porto
+                span.custom-arrow
+        div
+          a.text-decoration-none(href='demo-business-consulting-cases-detail.html')
+            span.thumb-info.custom-thumb-info-style-1.thumb-info-hide-wrapper-bg
+              span.thumb-info-wrapper.m-0
+                img.img-fluid(src='img/demos/business-consulting/cases/case-4.jpg' alt='')
+              span.thumb-info-caption.bg-color-secondary.p-4.pt-5.pb-5
+                span.custom-thumb-info-title
+                  span.custom-thumb-info-name.font-weight-semibold.text-color-dark.text-4 Tech Consulting
+                  span.custom-thumb-info-desc.font-weight-light GetCustom
+                span.custom-arrow
+        div
+          a.text-decoration-none(href='demo-business-consulting-cases-detail.html')
+            span.thumb-info.custom-thumb-info-style-1.thumb-info-hide-wrapper-bg
+              span.thumb-info-wrapper.m-0
+                img.img-fluid(src='img/demos/business-consulting/cases/case-5.jpg' alt='')
+              span.thumb-info-caption.bg-color-secondary.p-4.pt-5.pb-5
+                span.custom-thumb-info-title
+                  span.custom-thumb-info-name.font-weight-semibold.text-color-dark.text-4 Strategic
+                  span.custom-thumb-info-desc.font-weight-light Jet Orange
+                span.custom-arrow
+        div
+          a.text-decoration-none(href='demo-business-consulting-cases-detail.html')
+            span.thumb-info.custom-thumb-info-style-1.thumb-info-hide-wrapper-bg
+              span.thumb-info-wrapper.m-0
+                img.img-fluid(src='img/demos/business-consulting/cases/case-1.jpg' alt='')
+              span.thumb-info-caption.bg-color-secondary.p-4.pt-5.pb-5
+                span.custom-thumb-info-title
+                  span.custom-thumb-info-name.font-weight-semibold.text-color-dark.text-4 Litigation
+                  span.custom-thumb-info-desc.font-weight-light Paradoxx
+                span.custom-arrow
+        div
+          a.text-decoration-none(href='demo-business-consulting-cases-detail.html')
+            span.thumb-info.custom-thumb-info-style-1.thumb-info-hide-wrapper-bg
+              span.thumb-info-wrapper.m-0
+                img.img-fluid(src='img/demos/business-consulting/cases/case-2.jpg' alt='')
+              span.thumb-info-caption.bg-color-secondary.p-4.pt-5.pb-5
+                span.custom-thumb-info-title
+                  span.custom-thumb-info-name.font-weight-semibold.text-color-dark.text-4 Consulting
+                  span.custom-thumb-info-desc.font-weight-light iMessenger
+                span.custom-arrow
+        div
+          a.text-decoration-none(href='demo-business-consulting-cases-detail.html')
+            span.thumb-info.custom-thumb-info-style-1.thumb-info-hide-wrapper-bg
+              span.thumb-info-wrapper.m-0
+                img.img-fluid(src='img/demos/business-consulting/cases/case-3.jpg' alt='')
+              span.thumb-info-caption.bg-color-secondary.p-4.pt-5.pb-5
+                span.custom-thumb-info-title
+                  span.custom-thumb-info-name.font-weight-semibold.text-color-dark.text-4 Brand Consulting
+                  span.custom-thumb-info-desc.font-weight-light Theme Forest
+                span.custom-arrow
+        div
+          a.text-decoration-none(href='demo-business-consulting-cases-detail.html')
+            span.thumb-info.custom-thumb-info-style-1.thumb-info-hide-wrapper-bg
+              span.thumb-info-wrapper.m-0
+                img.img-fluid(src='img/demos/business-consulting/cases/case-4.jpg' alt='')
+              span.thumb-info-caption.bg-color-secondary.p-4.pt-5.pb-5
+                span.custom-thumb-info-title
+                  span.custom-thumb-info-name.font-weight-semibold.text-color-dark.text-4 Corporate Consulting
+                  span.custom-thumb-info-desc.font-weight-light Tucson
+                span.custom-arrow
+    section.custom-section-padding
+      .container
+        .row
+          .col
+            h2.font-weight-bold.text-color-dark - Testimonials
+        .row
+          .col
+            .owl-carousel.show-nav-title.custom-dots-style-1.custom-dots-position.custom-xs-arrows-style-2.mb-0(data-plugin-options="{'items': 1, 'autoHeight': true, 'loop': false, 'nav': false, 'dots': true}")
+              .row
+                .col-8.col-sm-4.col-lg-2.text-center.pt-5
+                  img.img-fluid.custom-rounded-image(src='img/demos/business-consulting/testimonials/testimonial-author-2.jpg' alt='')
+                .col-12.col-sm-12.col-lg-10
+                  .testimonial.custom-testimonial-style-1.testimonial-with-quotes.mb-0
+                    blockquote.pb-2
+                      p
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ante tellus, convallis non consectetur sed, pharetra nec ex. Aliquam et tortor nisi. Duis mollis diam nec elit volutpat suscipit.
+                    .testimonial-author.float-left
+                      p
+                        strong John Smith
+                        span.text-color-primary CEO &amp; Founder - Okler
+              .row
+                .col-8.col-sm-4.col-lg-2.text-center.pt-5
+                  img.img-fluid.custom-rounded-image(src='img/demos/business-consulting/testimonials/testimonial-author-3.jpg' alt='')
+                .col-12.col-sm-12.col-lg-10
+                  .testimonial.custom-testimonial-style-1.testimonial-with-quotes.mb-0
+                    blockquote.pb-2
+                      p
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ante tellus, convallis non consectetur sed, pharetra nec ex. Aliquam et tortor nisi. Duis mollis diam nec elit volutpat suscipit.
+                    .testimonial-author.float-left
+                      p
+                        strong John Smith
+                        span.text-color-primary CEO &amp; Founder - Okler
+    section.section-secondary.custom-section-padding
+      .container
+        .row
+          .col
+            h2.font-weight-bold.text-color-dark - Our Team
+        .row
+          .col
+            .owl-carousel.show-nav-title.custom-dots-style-1.custom-dots-position.custom-xs-arrows-style-2.mb-0(data-plugin-options="{'items': 4, 'margin': 20, 'autoHeight': true, 'loop': false, 'nav': false, 'dots': true}")
+              div
+                .team-item.p-0
+                  a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                    span.image-wrapper
+                      img.img-fluid(src='img/demos/business-consulting/team/team-1.jpg' alt='')
+                  .team-infos
+                    .share
+                      i.fas.fa-share-alt
+                      .share-icons.bg-color-light
+                        a.text-decoration-none(href='#' title='Share on Facebook')
+                          i.fab.fa-facebook-f
+                        a.text-decoration-none(href='#' title='Share on Instagram')
+                          i.fab.fa-instagram
+                        a.text-decoration-none(href='#' title='Share on Linkedin')
+                          i.fab.fa-linkedin-in
+                    a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                      span.team-member-name.text-color-dark.font-weight-semibold.text-4 John Doe
+                      span.team-member-desc.font-weight-light CEO
+              div
+                .team-item.p-0
+                  a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                    span.image-wrapper
+                      img.img-fluid(src='img/demos/business-consulting/team/team-2.jpg' alt='')
+                  .team-infos
+                    .share
+                      i.fas.fa-share-alt
+                      .share-icons.bg-color-light
+                        a.text-decoration-none(href='#' title='Share on Facebook')
+                          i.fab.fa-facebook-f
+                        a.text-decoration-none(href='#' title='Share on Instagram')
+                          i.fab.fa-instagram
+                        a.text-decoration-none(href='#' title='Share on Linkedin')
+                          i.fab.fa-linkedin-in
+                    a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                      span.team-member-name.text-color-dark.font-weight-semibold.text-4 Joyce Doe
+                      span.team-member-desc.font-weight-light Finance Expert
+              div
+                .team-item.p-0
+                  a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                    span.image-wrapper
+                      img.img-fluid(src='img/demos/business-consulting/team/team-3.jpg' alt='')
+                  .team-infos
+                    .share
+                      i.fas.fa-share-alt
+                      .share-icons.bg-color-light
+                        a.text-decoration-none(href='#' title='Share on Facebook')
+                          i.fab.fa-facebook-f
+                        a.text-decoration-none(href='#' title='Share on Instagram')
+                          i.fab.fa-instagram
+                        a.text-decoration-none(href='#' title='Share on Linkedin')
+                          i.fab.fa-linkedin-in
+                    a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                      span.team-member-name.text-color-dark.font-weight-semibold.text-4 Donald Doe
+                      span.team-member-desc.font-weight-light Manufacturing
+              div
+                .team-item.p-0
+                  a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                    span.image-wrapper
+                      img.img-fluid(src='img/demos/business-consulting/team/team-4.jpg' alt='')
+                  .team-infos
+                    .share
+                      i.fas.fa-share-alt
+                      .share-icons.bg-color-light
+                        a.text-decoration-none(href='#' title='Share on Facebook')
+                          i.fab.fa-facebook-f
+                        a.text-decoration-none(href='#' title='Share on Instagram')
+                          i.fab.fa-instagram
+                        a.text-decoration-none(href='#' title='Share on Linkedin')
+                          i.fab.fa-linkedin-in
+                    a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                      span.team-member-name.text-color-dark.font-weight-semibold.text-4 Jerry Doe
+                      span.team-member-desc.font-weight-light Project Manager
+              div
+                .team-item.p-0
+                  a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                    span.image-wrapper
+                      img.img-fluid(src='img/demos/business-consulting/team/team-5.jpg' alt='')
+                  .team-infos
+                    .share
+                      i.fas.fa-share-alt
+                      .share-icons.bg-color-light
+                        a.text-decoration-none(href='#' title='Share on Facebook')
+                          i.fab.fa-facebook-f
+                        a.text-decoration-none(href='#' title='Share on Instagram')
+                          i.fab.fa-instagram
+                        a.text-decoration-none(href='#' title='Share on Linkedin')
+                          i.fab.fa-linkedin-in
+                    a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                      span.team-member-name.text-color-dark.font-weight-semibold.text-4 Tom Doe
+                      span.team-member-desc.font-weight-light Business Development
+        .row.text-center.mt-5
+          .col
+            a.btn.btn-outline.custom-border-width.btn-primary.custom-border-radius.font-weight-semibold.text-uppercase(href='demo-business-consulting-team.html') View All
+    section.looking-for.section-primary
+      .container
+        .row.align-items-center
+          .col-md-6.col-lg-7
+            .looking-for-box
+              h2
+                | -
+                span.text-1.custom-secondary-font Are you looking for a
+                br
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Business plan Consultant?
+              p.mb-4.mb-md-0 Schedule your company strategy right session now
+          .col-md-3.d-flex.justify-content-md-end.mb-4.mb-md-0
+            a.text-decoration-none(href='tel:+00112304567' target='_blank' title='Call Us Now')
+              span.custom-call-to-action.white-border.text-color-light
+                span.action-title Call Us Now
+                span.action-info +001 1230 4567
+          .col-md-3.col-lg-2
+            a.text-decoration-none(href='mail:mail@example.com' target='_blank' title='Email Us Now')
+              span.custom-call-to-action.white-border.text-color-light
+                span.action-title Email Us Now
+                span.action-info mail@example.com
+    section.custom-section-padding
+      .container
+        .row
+          .col
+            h2.font-weight-bold.text-color-dark - Our Blog
+        .row
+          article.blog-post.col
+            .row
+              .col-sm-8.col-lg-5
+                .blog-post-image-wrapper
+                  img.img-fluid.mb-4(src='img/demos/business-consulting/blog/blog-1.jpg' alt='')
+                  span.blog-post-date.bg-color-primary.text-color-light.font-weight-bold
+                    | 20
+                    span.month-year.font-weight-light
+                      | Oct-16
+              .col-sm-12.col-lg-7
+                h2  Global Opportunities
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vi.
+                hr.solid
+                .post-infos.d-flex
+                  span.info.posted-by
+                    | Posted by:
+                    span.post-author.font-weight-semibold.text-color-dark
+                      | John Doe
+                  span.info.comments.ml-5
+                    | Comments:
+                    span.comments-number.text-color-primary.font-weight-semibold
+                      | 15
+                  span.info.like.ml-5
+                    | Like:
+                    span.like-number.font-weight-semibold.custom-color-red
+                      | 38
+                a.btn.btn-outline.custom-border-width.btn-primary.custom-border-radius.font-weight-semibold.text-uppercase.mt-4(href='demo-business-consulting-blog-detail.html' title='Read More') Read More
+    section.section.section-text-light.section-background.m-0(style="background: url('img/demos/business-consulting/contact/contact-background.jpg'); background-size: cover;")
+      .container
+        .row.justify-content-md-center
+          .col-lg-6.mb-5.mb-lg-0
+            h2.font-weight-bold - Contact Us
+            p.custom-opacity-font
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper.
+            .row
+              .col-md-6.custom-sm-margin-top
+                h4.mb-1 Call Us
+                a.text-decoration-none(href='tel:+1234567890' target='_blank' title='Call Us')
+                  span.custom-call-to-action-2.text-color-light.text-2.custom-opacity-font
+                    | Phone
+                    span.info.text-5
+                      | 123-456-7890
+              .col-md-6.custom-sm-margin-top
+                h4.mb-1 Our Location
+                p.custom-opacity-font Porto Business Consulting 123 Porto Blvd, Suite 100 New York, NY
+            .row
+              .col-md-6.custom-sm-margin-top
+                h4.mb-1 Mail Us
+                a.text-decoration-none(href='mail:mail@example.com' target='_blank' title='Mail Us')
+                  span.custom-call-to-action-2.text-color-light.text-2.custom-opacity-font
+                    | Email
+                    span.info.text-5
+                      | mail@example.com
+              .col-md-6.custom-sm-margin-top
+                h4.mb-1 Social Media
+                ul.social-icons.social-icons-clean.custom-social-icons-style-1.mt-2.custom-opacity-font
+                  li.social-icons-facebook
+                    a(href='http://www.facebook.com/' target='_blank' title='Facebook')
+                      i.fab.fa-facebook-f
+                  li.social-icons-twitter
+                    a(href='http://www.twitter.com/' target='_blank' title='Twitter')
+                      i.fab.fa-twitter
+                  li.social-icons-instagram
+                    a(href='http://www.instagram.com/' target='_blank' title='Instagram')
+                      i.fab.fa-instagram
+                  li.social-icons-linkedin
+                    a(href='http://www.linkedin.com/' target='_blank' title='Linkedin')
+                      i.fab.fa-linkedin-in
+          .col-lg-6.custom-sm-margin-top
+            h2.font-weight-bold - Write Us
+            form#contactForm.contact-form.custom-contact-form-style-1(action='php/contact-form.php' method='POST')
+              #contactSuccess.contact-form-success.alert.alert-success.d-none.mt-4
+                strong Success!
+                |  Your message has been sent to us.
+              #contactError.contact-form-error.alert.alert-danger.d-none.mt-4
+                strong Error!
+                |  There was an error sending your message.
+                span#mailErrorMessage.mail-error-message.text-1.d-block
+              input(type='hidden' name='subject' value='Contact Message Received')
+              .form-row
+                .form-group.col
+                  .custom-input-box
+                    i.icon-user.icons.text-color-primary
+                    input#name.form-control(type='text' value='' data-msg-required='Please enter your name.' maxlength='100' name='name' placeholder='Name*' required='')
+              .form-row
+                .form-group.col
+                  .custom-input-box
+                    i.icon-envelope.icons.text-color-primary
+                    input#email.form-control(type='email' value='' data-msg-required='Please enter your email address.' data-msg-email='Please enter a valid email address.' maxlength='100' name='email' placeholder='Email*' required='')
+              .form-row
+                .form-group.col
+                  .custom-input-box
+                    i.icon-bubble.icons.text-color-primary
+                    textarea#message.form-control(maxlength='5000' data-msg-required='Please enter your message.' rows='10' name='message' placeholder='Message*' required='')
+              .form-row
+                .form-group.col
+                  input.btn.btn-outline.custom-border-width.btn-primary.custom-border-radius.font-weight-semibold.text-uppercase(type='submit' value='Submit Now' data-loading-text='Loading...')
