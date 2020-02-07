@@ -1,0 +1,130 @@
+extends ../layout
+
+block body
+  .main(role='main')
+    section.page-header.page-header-modern.bg-color-quaternary.page-header-md.custom-page-header
+      .container
+        .row.mt-3
+          .col-md-8.order-2.order-md-1.align-self-center.p-static
+            h1 - John Doe
+            span.d-block.text-4 CEO &amp;amp Founder
+          .col-md-4.order-1.order-md-2.align-self-center
+            ul.breadcrumb.d-block.text-md-right.breadcrumb-light
+              li
+                a(href=l('l')) Home
+              li
+                a(href=l('/team')) Team
+              li.active John Doe
+    .container
+      .row.pt-1.pb-4.mb-3
+        .col
+          .row.mb-4
+            .col-md-3.text-center
+              .team-item
+                span.image-wrapper
+                  img.img-fluid(src=manifest('img/demos/business-consulting/team/team-1.jpg') alt='')
+                .team-infos
+                  .share
+                    i.fas.fa-share-alt
+                    .share-icons.bg-color-light
+                      a.text-decoration-none(href='#' title='Share on Facebook')
+                        i.fab.fa-facebook-f
+                      a.text-decoration-none(href='#' title='Share on Instagram')
+                        i.fab.fa-instagram
+                      a.text-decoration-none(href='#' title='Share on Linkedin')
+                        i.fab.fa-linkedin-in
+            .col-md-9
+              h1.mt-0.mb-0 - John Doe
+              p.lead.ml-4.pt-1 CEO &amp; Founder
+              p.lead
+                | Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis.
+              ul.list.list-icons
+                li
+                  i.icon-phone.icons
+                  strong Phone:
+                  |  (123) 456-789
+                li
+                  i.icon-envelope.icons
+                  strong Email:
+                  a(href='mailto:mail@example.com') mail@example.com
+          .row.mt-4
+            .col
+              p
+                | Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Vestibulum ante ipsum primis in faucibus orci.
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc
+                a(href='#') vehicula
+                |  lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.
+              p
+                | Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Vestibulum ante ipsum primis in faucibus orci.
+    section.section.section-text-light.section-background.m-0(style="background: url('../../img/demos/business-consulting/contact/contact-background.jpg'); background-size: cover;")
+      .container
+        .row.justify-content-md-center
+          .col-lg-6.mb-5.mb-lg-0
+            h2.font-weight-bold - Contact Us
+            p.custom-opacity-font
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper.
+            .row
+              .col-md-6.custom-sm-margin-top
+                h4.mb-1 Call Us
+                a.text-decoration-none(href='tel:+1234567890' target='_blank' title='Call Us')
+                  span.custom-call-to-action-2.text-color-light.text-2.custom-opacity-font
+                    | Phone
+                    span.info.text-5
+                      | 123-456-7890
+              .col-md-6.custom-sm-margin-top
+                h4.mb-1 Our Location
+                p.custom-opacity-font Porto Business Consulting 123 Porto Blvd, Suite 100 New York, NY
+            .row
+              .col-md-6.custom-sm-margin-top
+                h4.mb-1 Mail Us
+                a.text-decoration-none(href='mail:mail@example.com' target='_blank' title='Mail Us')
+                  span.custom-call-to-action-2.text-color-light.text-2.custom-opacity-font
+                    | Email
+                    span.info.text-5
+                      | mail@example.com
+              .col-md-6.custom-sm-margin-top
+                h4.mb-1 Social Media
+                ul.social-icons.social-icons-clean.custom-social-icons-style-1.mt-2.custom-opacity-font
+                  li.social-icons-facebook
+                    a(href='http://www.facebook.com/' target='_blank' title='Facebook')
+                      i.fab.fa-facebook-f
+                  li.social-icons-twitter
+                    a(href='http://www.twitter.com/' target='_blank' title='Twitter')
+                      i.fab.fa-twitter
+                  li.social-icons-instagram
+                    a(href='http://www.instagram.com/' target='_blank' title='Instagram')
+                      i.fab.fa-instagram
+                  li.social-icons-linkedin
+                    a(href='http://www.linkedin.com/' target='_blank' title='Linkedin')
+                      i.fab.fa-linkedin-in
+          .col-lg-6.custom-sm-margin-top
+            h2.font-weight-bold - Write Us
+            form#contactForm.contact-form.custom-contact-form-style-1(action='php/contact-form.php' method='POST')
+              #contactSuccess.contact-form-success.alert.alert-success.d-none.mt-4
+                strong Success!
+                |  Your message has been sent to us.
+              #contactError.contact-form-error.alert.alert-danger.d-none.mt-4
+                strong Error!
+                |  There was an error sending your message.
+                span#mailErrorMessage.mail-error-message.text-1.d-block
+              input(type='hidden' name='subject' value='Contact Message Received')
+              .form-row
+                .form-group.col
+                  .custom-input-box
+                    i.icon-user.icons.text-color-primary
+                    input#name.form-control(type='text' value='' data-msg-required='Please enter your name.' maxlength='100' name='name' placeholder='Name*' required='')
+              .form-row
+                .form-group.col
+                  .custom-input-box
+                    i.icon-envelope.icons.text-color-primary
+                    input#email.form-control(type='email' value='' data-msg-required='Please enter your email address.' data-msg-email='Please enter a valid email address.' maxlength='100' name='email' placeholder='Email*' required='')
+              .form-row
+                .form-group.col
+                  .custom-input-box
+                    i.icon-bubble.icons.text-color-primary
+                    textarea#message.form-control(maxlength='5000' data-msg-required='Please enter your message.' rows='10' name='message' placeholder='Message*' required='')
+              .form-row
+                .form-group.col
+                  input.btn.btn-outline.custom-border-width.btn-primary.custom-border-radius.font-weight-semibold.text-uppercase(type='submit' value='Submit Now' data-loading-text='Loading...')
+
