@@ -24,6 +24,8 @@ localeRouter
   .get('/about', render('about'))
   .get('/expertise', render('expertise/index'))
   .get('/expertise/about', render('expertise/detail'))
+  .get('/cases', render('cases/index'))
+  .get('/cases/about', render('cases/detail'))
   .get('/testimonials', render('testimonials'))
   .get('/team', render('team/index'))
   .get('/team/about', render('team/detail'))
