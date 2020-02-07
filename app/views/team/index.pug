@@ -1,4 +1,4 @@
-extends layout
+extends ../layout
 
 block body
   .main(role='main')
@@ -27,7 +27,7 @@ block body
             .row.team-list.sort-destination(data-sort-id='team')
               .col-md-4.isotope-item.leadership
                 .team-item.mb-4.p-0.pb-2
-                  a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                  a.text-decoration-none(href=l('/team/about'))
                     span.image-wrapper
                       img.img-fluid(src=manifest('img/demos/business-consulting/team/team-1.jpg') alt='')
                   .team-infos
@@ -40,12 +40,12 @@ block body
                           i.fab.fa-instagram
                         a.text-decoration-none(href='#' title='Share on Linkedin')
                           i.fab.fa-linkedin-in
-                    a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                    a.text-decoration-none(href=l('/team/about'))
                       span.team-member-name.text-color-dark.font-weight-semibold.text-4 John Doe
                       span.team-member-desc.font-weight-light CEO
               .col-md-4.isotope-item.other
                 .team-item.mb-4.p-0.pb-2
-                  a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                  a.text-decoration-none(href=l('/team/about'))
                     span.image-wrapper
                       img.img-fluid(src=manifest('img/demos/business-consulting/team/team-2.jpg') alt='')
                   .team-infos
@@ -58,12 +58,12 @@ block body
                           i.fab.fa-instagram
                         a.text-decoration-none(href='#' title='Share on Linkedin')
                           i.fab.fa-linkedin-in
-                    a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                    a.text-decoration-none(href=l('/team/about'))
                       span.team-member-name.text-color-dark.font-weight-semibold.text-4 Joyce Doe
                       span.team-member-desc.font-weight-light Finance Expert
               .col-md-4.isotope-item.other
                 .team-item.mb-4.p-0.pb-2
-                  a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                  a.text-decoration-none(href=l('/team/about'))
                     span.image-wrapper
                       img.img-fluid(src=manifest('img/demos/business-consulting/team/team-3.jpg') alt='')
                   .team-infos
@@ -76,12 +76,12 @@ block body
                           i.fab.fa-instagram
                         a.text-decoration-none(href='#' title='Share on Linkedin')
                           i.fab.fa-linkedin-in
-                    a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                    a.text-decoration-none(href=l('/team/about'))
                       span.team-member-name.text-color-dark.font-weight-semibold.text-4 Donald Doe
                       span.team-member-desc.font-weight-light Manufacturing
               .col-md-4.isotope-item.other
                 .team-item.mb-4.p-0.pb-2
-                  a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                  a.text-decoration-none(href=l('/team/about'))
                     span.image-wrapper
                       img.img-fluid(src=manifest('img/demos/business-consulting/team/team-4.jpg') alt='')
                   .team-infos
@@ -94,12 +94,12 @@ block body
                           i.fab.fa-instagram
                         a.text-decoration-none(href='#' title='Share on Linkedin')
                           i.fab.fa-linkedin-in
-                    a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                    a.text-decoration-none(href=l('/team/about'))
                       span.team-member-name.text-color-dark.font-weight-semibold.text-4 Jerry Doe
                       span.team-member-desc.font-weight-light Project Manager
               .col-md-4.isotope-item.other
                 .team-item.mb-4.p-0.pb-2
-                  a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                  a.text-decoration-none(href=l('/team/about'))
                     span.image-wrapper
                       img.img-fluid(src=manifest('img/demos/business-consulting/team/team-5.jpg') alt='')
                   .team-infos
@@ -112,7 +112,7 @@ block body
                           i.fab.fa-instagram
                         a.text-decoration-none(href='#' title='Share on Linkedin')
                           i.fab.fa-linkedin-in
-                    a.text-decoration-none(href='demo-business-consulting-team-detail.html')
+                    a.text-decoration-none(href=l('/team/about'))
                       span.team-member-name.text-color-dark.font-weight-semibold.text-4 Tom Doe
                       span.team-member-desc.font-weight-light Business Development
     section.section.section-text-light.section-background.m-0(style="background: url('../img/demos/business-consulting/contact/contact-background.jpg'); background-size: cover;")
@@ -185,4 +185,3 @@ block body
               .form-row
                 .form-group.col
                   input.btn.btn-outline.custom-border-width.btn-primary.custom-border-radius.font-weight-semibold.text-uppercase(type='submit' value='Submit Now' data-loading-text='Loading...')
-
