@@ -56,7 +56,8 @@ const DEV = config.env === 'development';
 const TEST = config.env === 'test';
 const staticAssets = [
   'assets/**/*',
-  '!assets/css/**/*',
+  'assets/css/**/*',
+  'assets/cjs/**/*',
   '!assets/img/**/*',
   '!assets/js/**/*'
 ];
