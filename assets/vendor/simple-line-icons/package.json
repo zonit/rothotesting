@@ -1,4 +1,10 @@
 {
+  "name": "simple-line-icons",
+  "description": "Simple and elegent line icons.",
+  "version": "2.4.1",
+  "author": {
+    "name": "Sabbir Ahmed"
+  },
   "_args": [
     [
       {
@@ -45,14 +51,10 @@
   "_shrinkwrap": null,
   "_spec": "simple-line-icons@~2.4.1",
   "_where": "E:\\_OKLER\\Templates\\Porto\\HTML",
-  "author": {
-    "name": "Sabbir Ahmed"
-  },
   "bugs": {
     "url": "https://github.com/thesabbir/simple-line-icons/issues"
   },
   "dependencies": {},
-  "description": "Simple and elegent line icons.",
   "devDependencies": {},
   "directories": {},
   "dist": {
@@ -62,10 +64,10 @@
   "gitHead": "ae1cf4ec75a8a32c4810a2fe7ca8c2fdf6f3e32c",
   "homepage": "https://thesabbir.github.io/simple-line-icons",
   "keywords": [
-    "icon",
-    "simple",
-    "line",
     "css",
+    "icon",
+    "line",
+    "simple",
     "webfont"
   ],
   "license": "MIT",
@@ -76,7 +78,6 @@
       "email": "mail@thesabbir.com"
     }
   ],
-  "name": "simple-line-icons",
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -85,6 +86,5 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "2.4.1"
+  }
 }

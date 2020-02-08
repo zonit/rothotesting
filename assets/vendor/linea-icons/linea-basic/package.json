@@ -1,4 +1,10 @@
 {
+  "name": "@icon/linea-basic",
+  "description": "Linea Iconset a free outline iconset  featuring 730+ Icons.",
+  "version": "1.0.0-alpha.2",
+  "author": {
+    "name": "Dario Ferrando"
+  },
   "_args": [
     [
       {
@@ -48,14 +54,10 @@
   "_shrinkwrap": null,
   "_spec": "@icon/linea-basic",
   "_where": "E:\\_OKLER\\Templates\\Porto\\HTML",
-  "author": {
-    "name": "Dario Ferrando"
-  },
   "bugs": {
     "url": "https://github.com/thecreation/icons/issues"
   },
   "dependencies": {},
-  "description": "Linea Iconset a free outline iconset  featuring 730+ Icons.",
   "devDependencies": {},
   "directories": {},
   "dist": {
@@ -69,8 +71,8 @@
   "gitHead": "402a588256f35c114d566112c00d8ed0d2016904",
   "homepage": "http://www.linea.io/",
   "keywords": [
-    "icons",
-    "icon"
+    "icon",
+    "icons"
   ],
   "license": "CC0-1.0",
   "maintainers": [
@@ -83,7 +85,6 @@
       "email": "kaptinlin@thecreation.co"
     }
   ],
-  "name": "@icon/linea-basic",
   "optionalDependencies": {},
   "publishConfig": {
     "access": "public"
@@ -97,6 +98,5 @@
     "import": "../../scripts/module/import --module=linea-basic",
     "optimize": "../../scripts/module/optimize",
     "update": "ncu -a"
-  },
-  "version": "1.0.0-alpha.2"
+  }
 }

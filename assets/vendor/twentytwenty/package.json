@@ -1,17 +1,8 @@
 {
   "name": "zurb-twentytwenty",
-  "version": "0.1.0",
   "description": "Zurb TwentyTwenty plugin",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "0.1.0",
   "author": "ZURB",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zurb/twentytwenty"
-  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
@@ -20,5 +11,14 @@
     "grunt-notify": "^0.4.1",
     "grunt-sass": "^1.1.0",
     "load-grunt-tasks": "^2.0.0"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zurb/twentytwenty"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
